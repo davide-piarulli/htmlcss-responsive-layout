@@ -3,3 +3,80 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.debug{
+  border: 1px solid black;
+}
+
+header{
+  height: 75px;
+  background-color: #0084fd;
+}
+
+body{
+  font-family: 'PT Sans', sans-serif;
+}
+
+/* elementi generici */
+
+.container{
+  width: 1140px;
+  margin: 0 auto;
+}
+
+/* UTILITIES */
+
+.d-flex{
+  display: flex;
+}
+
+.sp-between{
+  justify-content: space-between;
+}
+
+.al-it-center{
+  align-items: center;
+}
+
+/* SEZIONI */
+
+/* HEADER */
+
+header .container{
+  line-height: 75px
+}
+
+header .menu-desktop{
+  display: none;
+}
+
+/* RESPONSIVE */
+
+/* MOBILE  */
+@media screen and (max-width: 375px) {
+  .container{
+    width: 100%;
+    padding: 0 30px 0;
+  }
+}
+@media screen and (min-width: 376px) {
+  .container{
+    width: 100%;
+    padding: 0 30px 0;
+  }
+}
+
+
+/* TABLET 810 PX */
+@media screen and (min-width: 810px){
+  .container{
+    width: 810px;
+  }
+  .menu-mobile{
+    display: none;
+  }
+  header .menu-desktop{
+    display: block;
+  }
+}
+
