@@ -20,7 +20,7 @@ body{
 /* elementi generici */
 
 .container{
-  width: 1140px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -88,45 +88,63 @@ header .menu-desktop{
   background-color: #9792e4;
 }
 
-#teams .container{
+/* #teams .container{
   width: 100%;
-}
+} */
 
 #teams .container .col{
   height: 500px;
   width: 100%;
-  padding: 20px;
+  padding: 0 20px 20px;
 }
-
-/* #teams .planning{
-  
-}
-
-#teams .development{
-  
-} */
 
 #teams .col .content{
   height: 100%;
   background-color: white;
 }
 
-/* RESPONSIVE */
+/* TESTIMONIALS */
 
-/* MOBILE  */
-/* @media screen and (min-width: 300px) {
-  header .container{
-    width: 90%;
-    padding: 0;
-  }
+#testimonials{
+  height: 800px; /*da cancellare*/
+}
+
+/* #testimonials .container{
+  width: 100%;
 } */
 
+#testimonials .container .row{
+  padding: 15px 0;
+}
+
+#testimonials .container .row .intro{
+  padding: 0 20px;
+  height: 200px;
+}
+
+#testimonials .container .row .col {
+  /* width: 100%; */
+  padding: 0 20px;
+}
+
+#testimonials .container .row .col .card{
+  height: 300px;
+  background-color: #9792e4;
+  border-radius: 10%;
+
+}
 
 
-/* TABLET 810 PX */
+
+
+
+
+/* RESPONSIVE */
+
+/* TABLET 768 PX */
 @media screen and (min-width: 768px){
   .container{
-    width: 750px;
+    width: 768px;
     padding: 0;
   }
   .menu-mobile{
