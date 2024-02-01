@@ -15,12 +15,19 @@
 header{
   height: 75px;
   background-color: #0084fd;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 body{
   font-family: 'PT Sans', sans-serif;
 }
 
+main{
+  margin-top: 50px;
+}
 /* elementi generici */
 
 .container{
@@ -81,7 +88,7 @@ header .menu-desktop{
 #services .row .col .content{
   background-color: #b5ddff;
   height: 100%;
-  border-radius: 15%;
+  border-radius: 5%;
 }
 
 
@@ -198,17 +205,17 @@ footer .container{
 /* TABLET 768 PX */
 @media screen and (min-width: 768px){
   .container{
-    width: 768px;
+    max-width: 768px;
+  }
+  header .container{
     padding: 0;
-  }
-  .menu-mobile{
-    display: none;
-  }
-  header .menu-desktop{
-    display: block;
   }
   #services .row{
     flex-direction:row;
+  }
+  #services .row .col{
+    width: calc(100% / 3);
+    padding: 10px;
   }
   #services .row .col:nth-child(1){
     width: 60%;
@@ -219,11 +226,13 @@ footer .container{
 }
 
 @media screen and (min-width: 1200px){
-  header .container{
-    width: 90%;
-    padding: 0;
-  }
   .container{
-    width: 1200px;
+    max-width: 1200px;
+  }
+  .menu-mobile{
+    display: none;
+  }
+  header .menu-desktop{
+    display: block;
   }
 }
