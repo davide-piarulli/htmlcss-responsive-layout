@@ -35,6 +35,14 @@ main{
   margin: 0 auto;
 }
 
+.row .col{
+  padding: 0 20px;
+}
+
+.container .row{
+  padding: 15px 0;
+}
+
 /* UTILITIES */
 
 .d-flex{
@@ -75,17 +83,13 @@ header .menu-desktop{
 
 /* SERVICES */
 
-#services .container{
+#services .container .row .col{
+  height: 500px;
   width: 100%;
+  padding: 13px 20px;
 }
 
-#services .row .col{
-  height: 400px;
-  width: 100%;
-  padding: 20px;
-}
-
-#services .row .col .content{
+#services .container .row .col .content{
   background-color: #b5ddff;
   height: 100%;
   border-radius: 5%;
@@ -106,7 +110,14 @@ header .menu-desktop{
 
 #teams .col .content{
   height: 100%;
+  /* background-color: white; */
+}
+
+
+#teams .col .content.development{
+  border-radius: 5%;
   background-color: white;
+  height: 70%;
 }
 
 /* TESTIMONIALS */
@@ -115,17 +126,9 @@ header .menu-desktop{
   margin-bottom: 75px;
 }
 
-#testimonials .container .row{
-  padding: 15px 0;
-}
-
 #testimonials .container .row .intro{
   padding: 0 20px;
   height: 200px;
-}
-
-#testimonials .container .row .col {
-  padding: 0 20px;
 }
 
 #testimonials .container .row .col .card{
@@ -142,14 +145,6 @@ header .menu-desktop{
   margin-bottom: 40px;
 }
 
-#benefits .container .row{
-  padding: 15px 0;
-}
-
-#benefits .container .row .col {
-  padding: 0 20px;
-}
-
 #benefits .container .row .col .card{
   height: 300px;
   background-color: white;
@@ -159,10 +154,6 @@ header .menu-desktop{
 
 /* ABOUT US */
 
-#about-us .container .row .col {
-  padding: 0 20px;
-  height: 300px;
-}
 
 #about-us .container .row .col .content-about,
 #about-us .container .row .col .profile-about{
@@ -176,14 +167,6 @@ header .menu-desktop{
   height: 615px;
 }
 
-#get-started .container .row{
-  padding: 15px 0;
-}
-
-#get-started .container .row .col {
-  padding: 0 20px;
-}
-
 /* FOOTER */
 
 footer{
@@ -194,10 +177,6 @@ footer{
 footer .container{
   padding:  35px 30px;
 }
-
-
-
-
 
 
 /* RESPONSIVE */
@@ -213,7 +192,7 @@ footer .container{
   #services .row{
     flex-direction:row;
   }
-  #services .row .col{
+  #services .container .row .col{
     width: calc(100% / 3);
     padding: 10px;
   }
@@ -222,6 +201,10 @@ footer .container{
   }
   #services .row .col:nth-child(2){
     width: 40%;
+  }
+  /* TESTIMONIALS */
+  #testimonials .container .row .col .card{
+    display: flex;
   }
 }
 
@@ -234,5 +217,12 @@ footer .container{
   }
   header .menu-desktop{
     display: block;
+  }
+  /* teams */
+  #teams .container{
+    flex-direction: row;
+  }
+  #teams .col .content.development{
+    margin-top: 140px;
   }
 }
