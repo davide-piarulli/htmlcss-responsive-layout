@@ -177,6 +177,22 @@ header .menu-desktop{
   padding: 0 20px;
 }
 
+/* FOOTER */
+
+footer{
+  background-color: #333333;
+  height: 230px;
+}
+
+footer .container{
+  padding:  35px 30px;
+}
+
+
+
+
+
+
 /* RESPONSIVE */
 
 /* TABLET 768 PX */
