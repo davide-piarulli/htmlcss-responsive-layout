@@ -164,8 +164,18 @@ header .menu-desktop{
 
 /* GET STARTED */
 
+#get-started{
+  background-color: var(--bg-purple);
+  height: 615px;
+}
 
+#get-started .container .row{
+  padding: 15px 0;
+}
 
+#get-started .container .row .col {
+  padding: 0 20px;
+}
 
 /* RESPONSIVE */
 
