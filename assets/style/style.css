@@ -181,7 +181,7 @@ header nav ul li.btn a{
 }
 
 #demo .fa-solid{
-  width: 65px;
+  font-size: 65px;
   color: var(--blue);
 }
 
@@ -227,11 +227,51 @@ header nav ul li.btn a{
   background-color: var(--purple);
   border-radius: 40px;
   color: white;
-  text-align: center;
 }
 
 #testimonials .card img{
   border-radius: 50%;
+}
+
+/* BENEFITS */
+
+#benefits{
+  background-color: var(--purple);
+}
+
+#benefits h1{
+  color: white;
+  margin-bottom: 50px;
+  font-size: 1.8rem;
+}
+
+#benefits .container .row .col{
+  background-color: white;
+  border-radius: 20px;
+  margin: 0px 30px 20px;
+  padding: 30px 25px 30px;
+}
+
+#benefits .container .row .col h2{
+  color: var(--purple);
+}
+#benefits .container .row .col h2:first-child{
+  font-size: 3rem;
+}
+
+#benefits .container .row .col p{
+  color: var(--text-on-white);
+}
+
+#benefits .div-btn{
+  padding: 20px 0;
+}
+
+#benefits .btn{
+  background-color: var(--purple);
+  color: white;
+  text-decoration: none;
+  padding: 5px 20px;
 }
 
 
