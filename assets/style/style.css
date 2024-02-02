@@ -1,228 +1,170 @@
 :root{
-  --bg-purple: #9792e4;
+  --purple: #9792e4;
+  --blue: #0084fd;
+  --light-blue: #b5ddff;
+  --purple: #9792e4;
+  --bg-footer: #333333;
+  --text-general: #303030;
+  --text-on-white: #737373;
+
 }
 
 *{
-  margin: 0;
+  margin:0;
   padding: 0;
   box-sizing: border-box;
 }
-
-.debug{
-  border: 1px solid black;
-}
-
-header{
-  height: 75px;
-  background-color: #0084fd;
-  color: white;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
 body{
   font-family: 'PT Sans', sans-serif;
 }
 
-main{
-  margin-top: 50px;
+img{
+  width: 100%;
 }
-/* elementi generici */
 
+/* debug */
+.debug{
+  background-color: rgba(0,255,0,.2);
+  border: 1px solid black;
+  min-height: 50px;
+}
+
+header,
+.container,
+.row,
+.col{
+  background-color: rgba(0,255,0,.1);
+  border: 1px solid black;
+  min-height: 50px;
+}
+
+
+/* layout */
 .container{
   width: 100%;
   margin: 0 auto;
 }
 
-.row .col{
-  padding: 0 20px;
+.row{
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.container .row{
-  padding: 15px 0;
+.col{
+  width: 100%;
+  padding: 10px;
 }
 
-/* UTILITIES */
+.justify-center{
+  justify-content: center;
+}
 
+.justify-between{
+  justify-content: space-between;
+}
+
+.flex-nowrap{
+  flex-wrap: nowrap;
+}
+
+
+/* display */
 .d-flex{
   display: flex;
 }
 
-.wrap{
-  flex-wrap: wrap;
-}
-
-.sp-between{
-  justify-content: space-between;
-}
-
-.al-it-center{
-  align-items: center;
-}
-
-.dir-col{
-  flex-direction: column;
-}
-
-.pt-50{
-  padding-top: 50px;
-}
-/* SEZIONI */
-
-/* HEADER */
-
-header .container{
-  line-height: 75px;
-  padding: 0 30px 0;
-}
-
-header .menu-desktop{
+.d-none{
   display: none;
 }
 
-/* SERVICES */
-
-#services .container .row .col{
-  height: 500px;
-  width: 100%;
-  padding: 13px 20px;
+/* typobragraphy */
+.text-center{
+  text-align: center;
 }
 
-#services .container .row .col .content{
-  background-color: #b5ddff;
-  height: 100%;
-  border-radius: 5%;
+.text-right{
+  text-align: right;
 }
 
+/* GENERAL */
 
-/* TEAMS */
-
-#teams{
-  background-color: var(--bg-purple);
+header{
+  background-color: var(--blue);
+  color: white;
 }
 
-#teams .container .col{
-  height: 500px;
-  width: 100%;
-  padding: 0 20px 20px;
+header img{
+  width: 80px;
 }
-
-#teams .col .content{
-  height: 100%;
-  /* background-color: white; */
-}
-
-
-#teams .col .content.development{
-  border-radius: 5%;
-  background-color: white;
-  height: 70%;
-}
-
-/* TESTIMONIALS */
-
-#testimonials{
-  margin-bottom: 75px;
-}
-
-#testimonials .container .row .intro{
-  padding: 0 20px;
-  height: 200px;
-}
-
-#testimonials .container .row .col .card{
-  height: 300px;
-  background-color: var(--bg-purple);
-  border-radius: 10%;
-
-}
-
-/* BENEFITS */
-
-#benefits{
-  background-color: var(--bg-purple);
-  margin-bottom: 40px;
-}
-
-#benefits .container .row .col .card{
-  height: 300px;
-  background-color: white;
-  border-radius: 10%;
-
-}
-
-/* ABOUT US */
-
-
-#about-us .container .row .col .content-about,
-#about-us .container .row .col .profile-about{
-  padding: 10px 0;
-}
-
-/* GET STARTED */
-
-#get-started{
-  background-color: var(--bg-purple);
-  height: 615px;
-}
-
-/* FOOTER */
-
-footer{
-  background-color: #333333;
-  height: 230px;
-}
-
-footer .container{
-  padding:  35px 30px;
-}
-
 
 /* RESPONSIVE */
 
-/* TABLET 768 PX */
-@media screen and (min-width: 768px){
+/* tablet */
+@media (min-width: 768px){
+  
   .container{
-    max-width: 768px;
-  }
-  header .container{
-    padding: 0;
-  }
-  #services .row{
-    flex-direction:row;
-  }
-  #services .container .row .col{
+    width: 720px;
+  }  
+
+  #demo .col{
     width: calc(100% / 3);
-    padding: 10px;
   }
-  #services .row .col:nth-child(1){
+
+  #demo .col:first-child{
+    width: calc(100% / 1.5);
+  }
+
+  #testimonials .card .row{
+    flex-wrap: nowrap;
+  }
+
+  #testimonials .card .col:first-child{
+    width: 20%;
+  }
+
+  #testimonials .card .col:last-child{
+    width: 80%;
+  }
+
+  #benefits .col{
+    width: 50%;
+  }
+
+  #aboutus .col:first-child{
     width: 60%;
   }
-  #services .row .col:nth-child(2){
+
+  #aboutus .col:last-child{
     width: 40%;
   }
-  /* TESTIMONIALS */
-  #testimonials .container .row .col .card{
-    display: flex;
-  }
+
 }
 
-@media screen and (min-width: 1200px){
-  .container{
-    max-width: 1200px;
-  }
-  .menu-mobile{
+/* desktop */
+@media (min-width: 1200px){
+  .d-xl-none{
     display: none;
   }
-  header .menu-desktop{
+  .d-xl-block{
     display: block;
   }
-  /* teams */
-  #teams .container{
-    flex-direction: row;
+  .container{
+    width: 1140px;
   }
-  #teams .col .content.development{
-    margin-top: 140px;
+
+  #strategic .col{
+    width: 50%;
+  }
+
+  #benefits .col{
+    width: calc(100% / 3);
+  }
+
+  #aboutus .col:first-child{
+    width: 70%;
+  }
+
+  #aboutus .col:last-child{
+    width: 30%;
   }
 }
