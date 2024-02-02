@@ -132,7 +132,7 @@ header nav ul{
 }
 
 header nav ul li{
-  padding: 10px 20px;
+  padding: 10px 15px;
 }
 
 header nav ul li a{
@@ -148,7 +148,7 @@ header nav ul li.btn a{
 #demo .container .row .col {
   background-color: var(--light-blue);
   border-radius: 10px;
-  margin: 0px 30px 20px;
+  margin: 0px 30px 20px; /*capire come mettere il laterale senza far spaccare tutto*/
   padding: 40px 30px;
 }
 #demo .container .row .col:first-child {
@@ -163,7 +163,6 @@ header nav ul li.btn a{
   color: var(--text-general);
 }
 #demo .div-btn{
-  text-align: center;
   padding: 20px 0;
 }
 
@@ -177,12 +176,63 @@ header nav ul li.btn a{
 #demo .container .row .col .content{
   text-align: center;
 }
+#demo .container .row .col:first-child .content{
+  text-align: left;
+}
 
 #demo .fa-solid{
   width: 65px;
   color: var(--blue);
 }
 
+/* STRATEGIC */
+#strategic{
+  background-color: var(--purple);
+}
+
+#strategic .container .row .col {
+  margin: 0px 30px 20px;
+}
+
+#strategic .container .row .col:first-child {
+  color: white;
+}
+
+#strategic .container .row .col:last-child {
+  background-color: white;
+  border-radius: 40px;
+  color: var(--text-general);
+  text-align: center;
+}
+
+#strategic .arrow i{
+  background-color: var(--purple);
+  padding: 10px;
+  margin: 20px;
+  border-radius: 50%;
+}
+
+/* TESTIMONIALS */
+
+#testimonials h2{
+  color: var(--purple);
+}
+
+#testimonials .container .row {
+  margin: 0px 30px 20px;
+}
+
+
+#testimonials .card .row{
+  background-color: var(--purple);
+  border-radius: 40px;
+  color: white;
+  text-align: center;
+}
+
+#testimonials .card img{
+  border-radius: 50%;
+}
 
 
 /* RESPONSIVE */
