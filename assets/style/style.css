@@ -29,16 +29,7 @@ img{
 
 /* debug */
 .debug{
-  background-color: rgba(0,255,0,.2);
   border: 1px solid black;
-}
-
-/* .container, */
-/* .row, */
-.col{
-  /* background-color: rgba(0,255,0,.1); */
-  border: 1px solid black;
-  /* min-height: 50px; */
 }
 
 /* layout */
@@ -54,7 +45,7 @@ img{
 
 .col{
   width: 100%;
-  padding: 10px;
+  /* padding: 10px; */
 }
 
 .justify-center{
@@ -113,9 +104,9 @@ header{
   top: 0;
 }
 
-header .row{
+header .container .row{
   margin: 0 30px;
-
+  padding: 15px 0;
 }
 
 header img{
@@ -173,6 +164,10 @@ header nav ul li.btn a{
   color: white;
 }
 
+#demo .btn i{
+  margin-right: 10px;
+}
+
 #demo .container .row .col .content{
   text-align: center;
 }
@@ -194,6 +189,14 @@ header nav ul li.btn a{
   margin: 0px 30px 20px;
 }
 
+#strategic .container .row .col h2{
+  font-size: 2rem;
+}
+
+#strategic .container .row .col p{
+  padding: 50px 0 25px;
+}
+
 #strategic .container .row .col:first-child {
   color: white;
 }
@@ -205,6 +208,10 @@ header nav ul li.btn a{
   text-align: center;
 }
 
+#strategic .container .row .col .card p{
+  padding: 10px 20px;
+}
+
 #strategic .arrow i{
   background-color: var(--purple);
   padding: 10px;
@@ -214,12 +221,17 @@ header nav ul li.btn a{
 
 /* TESTIMONIALS */
 
+#testimonials{
+  padding-bottom: 50px;
+}
+
 #testimonials h2{
   color: var(--purple);
 }
 
 #testimonials .container .row {
   margin: 0px 30px 20px;
+  justify-content: center;
 }
 
 
@@ -227,16 +239,24 @@ header nav ul li.btn a{
   background-color: var(--purple);
   border-radius: 40px;
   color: white;
+  padding: 20px;
 }
 
 #testimonials .card img{
+  width: 50%;
   border-radius: 50%;
+  padding-bottom: 30px;
+}
+
+#testimonials .card h3{
+  padding-top: 20px;
 }
 
 /* BENEFITS */
 
 #benefits{
   background-color: var(--purple);
+  padding-bottom: 50px;
 }
 
 #benefits h1{
@@ -249,11 +269,12 @@ header nav ul li.btn a{
   background-color: white;
   border-radius: 20px;
   margin: 0px 30px 20px;
-  padding: 30px 25px 30px;
+  padding: 20px 25px 20px;
 }
 
 #benefits .container .row .col h2{
   color: var(--purple);
+  padding-bottom: 10px;
 }
 #benefits .container .row .col h2:first-child{
   font-size: 3rem;
@@ -271,10 +292,14 @@ header nav ul li.btn a{
   background-color: var(--purple);
   color: white;
   text-decoration: none;
-  padding: 5px 20px;
+  padding: 5px 50px;
 }
 
 /* ABOUT US */
+
+#aboutus{
+  padding-bottom: 50px;
+}
 
 #aboutus h2{
   color: var(--purple);
@@ -283,6 +308,7 @@ header nav ul li.btn a{
 
 #aboutus p{
   padding: 20px 0;
+  line-height: 2;
 }
 
 #aboutus .container .row {
@@ -314,6 +340,10 @@ header nav ul li.btn a{
   color: white;
   text-decoration: none;
   padding: 5px 20px;
+}
+
+#aboutus .btn i{
+  margin-right: 10px;
 }
 
 /* GET STARTED */
@@ -385,16 +415,18 @@ footer a{
 
 /* tablet */
 @media (min-width: 768px){
-  
   .container{
     width: 720px;
   }  
-
-  #demo .col{
+  header .container .row{
+    margin: 0 ;
+  }
+  #demo .container .row .col{
     width: calc(100% / 3);
+    margin: 0 0 25px;
   }
 
-  #demo .col:first-child{
+  #demo .container .row .col:first-child{
     width: calc(100% / 1.5);
   }
 
