@@ -136,10 +136,10 @@ header nav ul li.btn a{
 }
 
 /* DEMO */
-#demo .container .row .col {
+#demo .container .row .col .content{
   background-color: var(--light-blue);
   border-radius: 10px;
-  margin: 0px 30px 20px; /*capire come mettere il laterale senza far spaccare tutto*/
+  margin: 0px 30px 20px;
   padding: 40px 30px;
 }
 #demo .container .row .col:first-child {
@@ -248,9 +248,11 @@ header nav ul li.btn a{
 }
 
 #testimonials .card img{
-  width: 90%;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
   border-radius: 50%;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
 }
 
 #testimonials .card h3{
@@ -428,7 +430,11 @@ footer a{
   }
   #demo .container .row .col{
     width: calc(100% / 3);
-    margin: 0 0 25px;
+    margin: 0 0 10px;
+  }
+  #demo .container .row .col .content{
+    margin: 0px 10px 10px;
+    height: 100%;
   }
   #demo .container .row .col:first-child{
     width: calc(100% / 1.5);
@@ -476,11 +482,16 @@ footer a{
   .container{
     width: 1140px;
   }
+  #demo .container .row .col .content.demo{
+    display: flex;
+  }
 
   #strategic .col{
     width: 50%;
   }
-
+  #strategic .container .row{
+    flex-wrap: nowrap;
+  }
   #benefits .col{
     width: calc(100% / 3);
   }
